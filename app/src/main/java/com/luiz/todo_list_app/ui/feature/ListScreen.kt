@@ -24,7 +24,9 @@ import com.luiz.todo_list_app.ui.theme.TodolistappTheme
 
 @Composable
 fun ListScreen(modifier: Modifier = Modifier) {
-
+    ListContent(
+        todos = emptyList()
+    )
 }
 
 @Composable
