@@ -8,6 +8,7 @@ hilt = "2.51.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 kotlin = "2.0.20"
+kotlinxSerialization = "1.7.1"
 ksp = "2.0.20-1.0.24"
 lifecycle = "2.8.5"
 lifecycleRuntimeKtx = "2.8.5"
@@ -36,8 +37,10 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
+#tests
+junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
