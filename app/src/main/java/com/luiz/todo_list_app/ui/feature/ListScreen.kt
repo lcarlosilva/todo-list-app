@@ -23,17 +23,24 @@ import com.luiz.todo_list_app.ui.components.TodoItem
 import com.luiz.todo_list_app.ui.theme.TodolistappTheme
 
 @Composable
-fun ListScreen(modifier: Modifier = Modifier) {
+fun ListScreen(
+    modifier: Modifier = Modifier,
+    navigateToAddEditScreen: (id: Long?) -> Unit,
+) {
     ListContent(
-        todos = emptyList()
+        todos = emptyList(),
+        onAddItemClick = navigateToAddEditScreen
     )
 }
 
 @Composable
-fun ListContent(todos: List<Todo>) {
+fun ListContent(
+    todos: List<Todo>,
+    onAddItemClick: (id: Long?) -> Unit,
+) {
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(onClick = {}) {
+            FloatingActionButton(onClick = { onAddItemClick(null) }) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add")
             }
         }
@@ -68,7 +75,8 @@ private fun ListContentPreview() {
                 todoOne,
                 todoTwo,
                 todoThree
-            )
+            ),
+            onAddItemClick = {}
         )
     }
 }
