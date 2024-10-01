@@ -5,7 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.luiz.todo_list_app.ui.feature.AddEditScreen
+import com.luiz.todo_list_app.ui.feature.add_edit.AddEditScreen
 import com.luiz.todo_list_app.ui.feature.ListScreen
 import kotlinx.serialization.Serializable
 
